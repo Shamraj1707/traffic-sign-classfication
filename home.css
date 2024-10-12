@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url("Road\ Safety\ Commission\ -\ Website\ Banner\ -\ 850x425\ pixles\ -\ Resources\ Page\ -\ FINAL\ FILE.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: black;
+}
+
+#img{
+    width: 100%;
+    min-width: 400px;
+    height: 150px;
+
+}
+
+#nav{
+
+    width: 100%;
+    background-color: aquamarine;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+nav a {
+    margin: 2px 10px;
+    padding: 2px;
+    text-align: center;
+    padding: 5px 7px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    color: darkolivegreen;
+}
+
+#upload{
+    padding: 10px;
+    margin: 10% 35%;
+    width: 40%;
+    min-width: 300px;
+    height: auto;
+    min-height: 300px;
+    background-color: rgba(224, 104, 104, 0.948);
+}
+
+h1{
+    padding: 15px;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+label{
+    font-family: cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
+input{
+    width: 100px;
+    color: black;
+    margin: 5px;
+    padding: 5px;
+}
+
+#imagePreview{
+    padding: 5px auto;
+    width: 200px;
+    height: 150px;
+}
+
+
+#main{
+    margin: 10px 30%;
+    display: grid;
+}
+
+#para{
+    width: 98%;
+    margin: ;
+    min-width: 400px;
+    background-color: darkgray;
+    padding: 10px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    text-transform: bold;
+    font-size: 18px;
+}
+
+#para p{
+    padding: 20px 0px;
+    color: black;
+    text-indent: 15%;
+    text-align: justify;
+}
+
+#about{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#contributers{
+    padding-bottom: 5px;
+    color: white;
+    margin: 10px 0px;
+}
+
+.names {
+    padding: 20px;
+}
+
+p{
+    color: white;
+    text-transform: capitalize;
+    font-size: 14px;
+}

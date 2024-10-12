@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Sign Classification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="static/home.css">
+</head>
+<body>
+    <div>
+        <header>
+            <img src="static/logo.jpg" alt="TSC logo" id="img">
+        </header>
+    </div>
+    <div id="nav">
+        <nav>
+            <a href="javascript:void(0);">About</a>
+            <a href="javascript:void(0);">Rules</a>
+            <a href="javascript:void(0);">Contact</a>
+        </nav>
+    </div>
+    <div id="upload">
+        <h1>Traffic Sign <br> Classification</h1>
+        <form action="/classify" method="POST" enctype="multipart/form-data" id="main">
+            <label for="imageUpload">Choose an image:</label><br>
+            <input type="file" id="imageUpload" name="image" accept="image/*" required><br><br>
+            
+            <!-- Image preview -->
+            <img id="imagePreview" src="#" alt="Image Preview" style="display: none; max-width: 300px; max-height: 300px;" />
+            
+            <br><br>
+            <input type="submit" value="Upload Image">
+            <br><br>
+            <textarea name="output" id="output" rows="3" readonly>{{ output }}</textarea>  <!-- Use output variable -->
+        </form>
+    </div>
+    <div id="para">
+        <!-- Your content remains the same -->
+    </div>
+    <div id="about">
+        <!-- Contributor sections remain the same -->
+    </div>
+    <div id="para">   
+        <p>
+            Traffic rules are essential for maintaining safety and order on the roads, protecting drivers, passengers, and pedestrians alike. They are designed to prevent accidents and ensure the smooth flow of traffic. Key rules, such as obeying traffic signals, wearing seat belts, following speed limits, and avoiding distractions like mobile phones, all play a vital role in reducing risks on the road.
+
+            The importance of these rules cannot be overstated. Speed limits help control the pace of vehicles, while seat belts and helmets safeguard individuals during collisions. Traffic signals and road signs provide clear instructions, guiding both drivers and pedestrians in a safe manner. Additionally, avoiding driving under the influence of alcohol or drugs is crucial for preventing accidents.
+            
+        </p>
+        <p>    
+            Ignoring traffic rules can lead to severe consequences, including accidents, injuries, or even fatalities. Violators also face legal penalties, such as fines or license suspensions. However, more than just preventing punishment, following traffic rules reflects responsibility and consideration for others on the road.
+            
+        </p> 
+        <p> 
+            Education and awareness are crucial in promoting road safety. Campaigns and driver training programs emphasize the importance of adhering to traffic rules. Combined with enforcement by traffic authorities, these efforts help cultivate a culture of responsible driving.
+              
+            In conclusion, traffic rules exist to save lives and prevent chaos on the roads. By following them, we contribute to a safer, more organized, and respectful environment for everyone traveling on shared roads.
+        </p>
+        
+        <p>
+            Neglecting traffic rules can have severe consequences. Not only does it endanger the life of the violator, but it also puts other road users at risk. For example, running a red light may lead to a collision at an intersection, potentially causing multiple injuries or fatalities. Speeding in residential areas increases the risk of hitting pedestrians, especially children, who may not be aware of approaching vehicles.
+            In addition to the immediate physical dangers, violating traffic rules can also result in legal consequences, including fines, license suspensions, or even imprisonment in serious cases. Insurance premiums may rise for individuals who frequently break traffic rules, as they are considered high-risk drivers.
+        </p>
+    </div>
+    <div id="about">
+        <div id="jency" class="names">
+            <h2 id="contributers">Jency Sarah J</h2>
+            <a href="https://github.com/JencySarahJ" class="github" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <p>github</p>
+            <br><br>
+            <a href="https://www.linkedin.com/in/jency-sarah-j-16b0a6274" class="linkedin" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <p>linkedin</p>
+        </div>
+        <div id="sham" class="names">
+            <h2 id="contributers">Shamraj M</h2>
+            <a href="https://github.com/Shamraj1707" class="github" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <p>github</p>
+            <br><br>
+            <a href="https://www.linkedin.com/in/shamraj1707/" class="linkedin" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <p>linkedin</p>
+        </div>
+    </div>
+    <script>
+        // JavaScript to handle image preview
+        const imageUpload = document.getElementById('imageUpload');
+        const imagePreview = document.getElementById('imagePreview');
+
+        imageUpload.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imagePreview.setAttribute('src', e.target.result);
+                    imagePreview.style.display = 'block'; // Show the image
+                }
+                reader.readAsDataURL(file); // Read the image as data URL
+            }
+        });
+    </script>
+    
+</body>
+</html>
